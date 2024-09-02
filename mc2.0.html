@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladri di Cuori - Grupo de Dança Italiana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.8); /* Verde com transparência */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(76, 175, 80, 0.8); /* Verde com transparência */
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://i.pinimg.com/736x/cd/6c/f0/cd6cf0989b0a02d8d76fcb7d28ce493d.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            border-radius: 10px;
+        }
+        .about {
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2em;
+            color: #4CAF50; /* Verde */
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: calc(33% - 20px);
+            border-radius: 10px;
+        }
+        .contact {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            margin-top: 0;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background-color: white;
+            color: #4CAF50; /* Verde */
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .social-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-buttons a {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-buttons a:hover {
+            background-color: #45a049; /* Tom de verde mais escuro */
+        }
+        .contact-info {
+            margin: 20px 0;
+        }
+        .contact-info a {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .contact-info a:hover {
+            background-color: #45a049; /* Tom de verde mais escuro */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Ladri Di Cuori </h1>
+        <img src= data:image/jpeg;base64,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 img >
+        <nav>
+            <a href="#about">Sobre</a>
+            <a href="#gallery">Galeria</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Bem-vindo ao Ladri di Cuori!</h2>
+    </section>
+
+    <div class="container">
+
+        <section id="about" class="about">
+            <h2>Sobre o Grupo</h2>
+            <p>O Ladri di Cuori é um grupo de dança italiana apaixonado por preservar e promover as tradições da dança italiana. Com anos de experiência, trazemos uma combinação vibrante de performances ao vivo e aulas para todas as idades. Nossa missão é compartilhar a alegria e a cultura da dança italiana com o mundo.</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <img src="https://www.sescpr.com.br/wp-content/uploads/2019/05/Ladri-di-Cuori-1-720x406.jpeg" alt="Dança 1">
+            <img src="https://i.ytimg.com/vi/Q5VWDS-UMVo/sddefault.jpg" alt="Dança 2">
+            <img src="https://sardegnaterramia.wordpress.com/wp-content/uploads/2011/08/20090417110641.jpg?w=584" alt="Dança 3">
+        
+    
+        
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contato</h2>
+            <form action="mailto:fmagofer@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/ladridicuori.oficial/" target="_blank">Siga-nos no Instagram</a>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+5545999785179">Ligue para nós: (45) 99978-5179</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ladri di Cuori. Todos os direitos reservados. Mateus F - Cauê </p>
+        <p>Rua Minas Gerais, 2795 - Centro</p>
+    </footer>
+
+</body>
+</html>
